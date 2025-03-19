@@ -1,0 +1,11 @@
+{
+  "autoload": {
+    "psr-4": {
+      "FewMailSmtp\\":"inc/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}

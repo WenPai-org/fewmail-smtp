@@ -1,0 +1,548 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FewMail SMTP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-19 15:53+0000\n"
+"PO-Revision-Date: 2025-03-20 00:29+0800\n"
+"Last-Translator: \n"
+"Language-Team: 简体中文\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Loco-Version: 2.6.11; wp-6.7.2\n"
+"X-Domain: fewmail-smtp\n"
+
+#: includes/Config.php:53
+msgid "126"
+msgstr "126"
+
+#: includes/Config.php:48
+msgid "163"
+msgstr "163"
+
+#: includes/Config.php:166
+msgid "1und1"
+msgstr "1und1"
+
+#. Description of the plugin
+msgid ""
+"A WordPress email plugin that makes it convenient for users to configure "
+"SMTP settings."
+msgstr "一个 WordPress 电子邮件插件，方便用户配置 SMTP 设置。"
+
+#: includes/Config.php:68
+msgid "Aliyun"
+msgstr "Aliyun"
+
+#: includes/Config.php:73
+msgid "Aliyun Qiye"
+msgstr "Aliyun Qiye"
+
+#: includes/Config.php:13
+msgid "AOL"
+msgstr "AOL"
+
+#: includes/Setting-Page.php:335
+msgid "Are you sure you want to clear all logs?"
+msgstr "您确实要清除所有日志吗？"
+
+#: fewmail-smtp.php:324
+msgid "Auto-clear settings saved!"
+msgstr "自动清除设置已保存！"
+
+#: includes/Config.php:171
+msgid "Bluewin"
+msgstr "Bluewin"
+
+#: includes/Config.php:83
+msgid "Business Email Services"
+msgstr "商业电子邮件服务"
+
+#: includes/Setting-Page.php:118
+msgid "Check to stop logging sent emails."
+msgstr "勾选即可停止记录已发送的电子邮件。"
+
+#: includes/Config.php:46
+msgid "China Popular Services"
+msgstr "中国热门服务"
+
+#: includes/Setting-Page.php:191
+msgid "Clear Logs"
+msgstr "清除日志"
+
+#: fewmail-smtp.php:98
+msgid "Config"
+msgstr "配置"
+
+#: fewmail-smtp.php:346
+msgid "Configuration error, please check and resave!"
+msgstr "配置错误，请检查并重新保存！"
+
+#: fewmail-smtp.php:344
+msgid "Configuration saved successfully!"
+msgstr "配置保存成功！"
+
+#: includes/Setting-Page.php:34
+msgid "Configure your SMTP settings to send emails from your WordPress site."
+msgstr "配置您的 SMTP 设置以从 WordPress 网站发送电子邮件。"
+
+#: includes/Setting-Page.php:147
+msgid ""
+"Congratulations, your website's email sending function is working. Start "
+"using it now!"
+msgstr "恭喜，您的网站电子邮件发送功能已恢复正常运作。立即开始使用吧！"
+
+#: includes/Setting-Page.php:193
+msgid "days auto-clear"
+msgstr "天自动清除"
+
+#: includes/Config.php:175
+msgid "DebugMail"
+msgstr "DebugMail"
+
+#: includes/Setting-Page.php:112
+msgid "Disable Logs"
+msgstr "禁用日志"
+
+#: includes/Setting-Page.php:116
+msgid "Disable the email logging feature"
+msgstr "禁用电子邮件日志记录功能"
+
+#: includes/Setting-Page.php:14
+msgid "Document"
+msgstr "文档"
+
+#: fewmail-smtp.php:372
+msgid "Email failed to send."
+msgstr "电子邮件发送失败。"
+
+#: includes/Setting-Page.php:160
+msgid "Email Logs"
+msgstr "电子邮件日志"
+
+#: fewmail-smtp.php:370
+msgid "Email sent!"
+msgstr "电子邮件已发送！"
+
+#: includes/Setting-Page.php:201
+msgid "Email Statistics"
+msgstr "电子邮件统计"
+
+#: includes/Setting-Page.php:82
+msgid "Encryption type for secure email sending."
+msgstr "用于安全电子邮件发送的加密类型。"
+
+#: includes/Setting-Page.php:171 includes/Setting-Page.php:181
+msgid "Error"
+msgstr "错误"
+
+#: includes/Config.php:179
+msgid "Ethereal"
+msgstr "Ethereal"
+
+#: includes/Setting-Page.php:221
+msgid "Failed Sends"
+msgstr "发送失败"
+
+#: includes/Config.php:183
+msgid "FastMail"
+msgstr "FastMail"
+
+#. Name of the plugin
+#: fewmail-smtp.php:225 includes/Setting-Page.php:12
+msgid "FewMail SMTP"
+msgstr "飞秒邮件 SMTP"
+
+#. Author of the plugin
+msgid "FewMail.com"
+msgstr "飞秒邮件"
+
+#: fewmail-smtp.php:379
+msgid "Fields are not filled in or there is an error."
+msgstr "字段未填写或有错误。"
+
+#: includes/Config.php:188
+msgid "Forward Email"
+msgstr "Forward Email"
+
+#: includes/Setting-Page.php:39
+msgid "From"
+msgstr "发件人"
+
+#: includes/Setting-Page.php:46
+msgid "From Name"
+msgstr "发件人姓名"
+
+#: includes/Config.php:193
+msgid "GandiMail"
+msgstr "GandiMail"
+
+#: includes/Setting-Page.php:394
+#, php-format
+msgid "Get settings for %s"
+msgstr "获取 %s 的设置"
+
+#: includes/Config.php:11
+msgid "Global Popular Services"
+msgstr "全球热门服务"
+
+#: includes/Config.php:17
+msgid "Gmail"
+msgstr "Gmail"
+
+#: includes/Config.php:197
+msgid "Godaddy"
+msgstr "FastMail"
+
+#: includes/Config.php:201
+msgid "GodaddyAsia"
+msgstr "GodaddyAsia"
+
+#: includes/Config.php:205
+msgid "GodaddyEurope"
+msgstr "GodaddyEurope"
+
+#. Author URI of the plugin
+msgid "https://fewmail.com/"
+msgstr "https://fewmail.com/"
+
+#. URI of the plugin
+msgid "https://wenpai.org/plugins/fewmail-smtp"
+msgstr "https://wenpai.org/plugins/fewmail-smtp"
+
+#: includes/Config.php:22
+msgid "iCloud"
+msgstr "iCloud"
+
+#: includes/Setting-Page.php:167 includes/Setting-Page.php:177
+msgid "ID"
+msgstr "ID"
+
+#: includes/Config.php:209
+msgid "Infomaniak"
+msgstr "Infomaniak"
+
+#: fewmail-smtp.php:330 fewmail-smtp.php:353
+msgid "Insufficient privileges!"
+msgstr "权限不足！"
+
+#: includes/Setting-Page.php:225
+msgid "Last Send Time"
+msgstr "上次发送时间"
+
+#: fewmail-smtp.php:100
+msgid "Logs"
+msgstr "日志"
+
+#: fewmail-smtp.php:314
+msgid "Logs cleared successfully!"
+msgstr "日志清除成功！"
+
+#: includes/Config.php:213
+msgid "Mail.ru"
+msgstr "Mail.ru"
+
+#: includes/Config.php:218
+msgid "Mailcatch.app"
+msgstr "Mailcatch.app"
+
+#. 第三方服务
+#: includes/Config.php:86
+msgid "Mailgun"
+msgstr "Mailgun"
+
+#: includes/Config.php:91
+msgid "Mailjet"
+msgstr "Mailjet"
+
+#: includes/Config.php:222
+msgid "Mailosaur"
+msgstr "Mailosaur"
+
+#: includes/Config.php:226
+msgid "Mailtrap"
+msgstr "Mailtrap"
+
+#: includes/Config.php:230
+msgid "Mandrill"
+msgstr "Mandrill"
+
+#: includes/Setting-Page.php:146
+msgid "Message"
+msgstr "信息"
+
+#: includes/Setting-Page.php:207
+msgid "Metric"
+msgstr "参数"
+
+#: includes/Config.php:234
+msgid "Naver"
+msgstr "Naver"
+
+#: includes/Setting-Page.php:226
+msgid "Never Sent"
+msgstr "从未发送"
+
+#: includes/Config.php:238
+msgid "OhMySMTP"
+msgstr "OhMySMTP"
+
+#: includes/Config.php:243
+msgid "One"
+msgstr "One"
+
+#: includes/Config.php:248
+msgid "OpenMailBox"
+msgstr "OpenMailBox"
+
+#: includes/Config.php:164
+msgid "Other Services"
+msgstr "其他服务"
+
+#: includes/Config.php:26
+msgid "Outlook365"
+msgstr "Outlook365"
+
+#: includes/Setting-Page.php:105
+msgid "Password"
+msgstr "密码"
+
+#: includes/Setting-Page.php:56
+msgid "Pick your email service to auto-fill settings."
+msgstr "选择您的电子邮件服务来自动填充设置。"
+
+#: includes/Setting-Page.php:396
+#, php-format
+msgid "Please ensure you have the correct username and password for %s."
+msgstr "请确保您拥有 %s 的正确用户名和密码。"
+
+#: includes/Config.php:95
+msgid "Postmark"
+msgstr "Postmark"
+
+#: includes/Config.php:58
+msgid "QQ"
+msgstr "QQ"
+
+#: includes/Config.php:63
+msgid "QQex"
+msgstr "QQex"
+
+#: includes/Setting-Page.php:190
+msgid "Refresh"
+msgstr "刷新"
+
+#: includes/Setting-Page.php:194
+msgid "Save Auto-Clear"
+msgstr "保存自动清除"
+
+#: includes/Setting-Page.php:126
+msgid "Save Changes"
+msgstr "保存更改"
+
+#: fewmail-smtp.php:236
+msgid "Select a provider"
+msgstr "选择提供商"
+
+#: includes/Setting-Page.php:133
+msgid "Send a test email to verify your SMTP settings."
+msgstr "发送测试电子邮件以验证您的 SMTP 设置。"
+
+#: includes/Setting-Page.php:154
+msgid "Send Test"
+msgstr "发送测试"
+
+#: includes/Config.php:253
+msgid "SendCloud"
+msgstr "SendCloud"
+
+#: includes/Config.php:99
+msgid "SendGrid"
+msgstr "SendGrid"
+
+#: includes/Config.php:103
+msgid "SendinBlue"
+msgstr "SendinBlue"
+
+#: includes/Config.php:107
+msgid "SendPulse"
+msgstr "SendPulse"
+
+#: includes/Setting-Page.php:53
+msgid "Service Provider"
+msgstr "服务提供商"
+
+#. AWS SES 按区域字母排序
+#: includes/Config.php:114
+msgid "SES-AP-NORTHEAST-1"
+msgstr "SES-AP-NORTHEAST-1"
+
+#: includes/Config.php:119
+msgid "SES-AP-NORTHEAST-2"
+msgstr "SES-AP-NORTHEAST-2"
+
+#: includes/Config.php:124
+msgid "SES-AP-NORTHEAST-3"
+msgstr "SES-AP-NORTHEAST-3"
+
+#: includes/Config.php:129
+msgid "SES-AP-SOUTH-1"
+msgstr "SES-AP-SOUTH-1"
+
+#: includes/Config.php:134
+msgid "SES-AP-SOUTHEAST-1"
+msgstr "SES-AP-SOUTHEAST-1"
+
+#: includes/Config.php:139
+msgid "SES-AP-SOUTHEAST-2"
+msgstr "SES-AP-SOUTHEAST-2"
+
+#: includes/Config.php:144
+msgid "SES-EU-WEST-1"
+msgstr "SES-EU-WEST-1"
+
+#: includes/Config.php:149
+msgid "SES-US-EAST-1"
+msgstr "SES-US-EAST-1"
+
+#: includes/Config.php:154
+msgid "SES-US-WEST-2"
+msgstr "SES-US-WEST-2"
+
+#: includes/Setting-Page.php:94
+msgid "Set to “Yes” if login is required."
+msgstr "如果需要登录，则设置为“是”。"
+
+#: fewmail-smtp.php:216
+msgid "Settings"
+msgstr "设置"
+
+#: fewmail-smtp.php:226
+msgid "SMTP"
+msgstr "SMTP"
+
+#: includes/Setting-Page.php:86
+msgid "SMTP Authentication"
+msgstr "SMTP 身份验证"
+
+#: includes/Setting-Page.php:33
+msgid "SMTP Configuration"
+msgstr "SMTP 配置"
+
+#: includes/Setting-Page.php:60
+msgid "SMTP Host"
+msgstr "SMTP 主机"
+
+#: includes/Setting-Page.php:67
+msgid "SMTP Port"
+msgstr "SMTP 端口"
+
+#: includes/Setting-Page.php:74
+msgid "SMTP Secure"
+msgstr "SMTP 安全"
+
+#: includes/Config.php:257
+msgid "Sparkpost"
+msgstr "Sparkpost"
+
+#: includes/Setting-Page.php:142 includes/Setting-Page.php:170
+#: includes/Setting-Page.php:180
+msgid "Subject"
+msgstr "主题"
+
+#: includes/Setting-Page.php:217
+msgid "Successful Sends"
+msgstr "发送成功"
+
+#: includes/Setting-Page.php:15
+msgid "Support"
+msgstr "支持"
+
+#: includes/Setting-Page.php:132
+msgid "Test Email"
+msgstr "测试电子邮件"
+
+#: fewmail-smtp.php:99
+msgid "Testing"
+msgstr "测试"
+
+#: includes/Setting-Page.php:63
+msgid "The address of your email server."
+msgstr "您的电子邮件服务器的地址。"
+
+#: includes/Setting-Page.php:42
+msgid "The email address shown as the sender."
+msgstr "显示为发件人的电子邮件地址。"
+
+#: includes/Setting-Page.php:70
+msgid "The port number for your email server."
+msgstr "您的电子邮件服务器的端口号。"
+
+#: includes/Setting-Page.php:49
+msgid "The sender name shown in emails."
+msgstr "电子邮件中显示的发件人姓名。"
+
+#: includes/Setting-Page.php:169 includes/Setting-Page.php:179
+msgid "Timestamp"
+msgstr "时间戳"
+
+#: includes/Config.php:262
+msgid "Tipimail"
+msgstr "Tipimail"
+
+#: includes/Setting-Page.php:138 includes/Setting-Page.php:168
+#: includes/Setting-Page.php:178
+msgid "To"
+msgstr "收件人"
+
+#: includes/Setting-Page.php:213
+msgid "Total Emails Attempted"
+msgstr "尝试发送电子邮件总数"
+
+#: includes/Setting-Page.php:98
+msgid "Username"
+msgstr "用户名"
+
+#: includes/Setting-Page.php:208
+msgid "Value"
+msgstr "数值"
+
+#: includes/Setting-Page.php:13
+#, php-format
+msgid "Version: %s"
+msgstr "版本： %s"
+
+#: includes/Setting-Page.php:161
+msgid "View and manage your email sending logs."
+msgstr "查看和管理您的电子邮件发送日志。"
+
+#: includes/Setting-Page.php:202
+msgid "View statistics of emails sent through your SMTP configuration."
+msgstr "查看通过您的 SMTP 配置已发送的电子邮件统计信息。"
+
+#: includes/Setting-Page.php:143
+msgid "Welcome to FewMail"
+msgstr "欢迎使用飞秒邮箱（FewMail）"
+
+#: includes/Config.php:31
+msgid "Yahoo"
+msgstr "Yahoo"
+
+#: includes/Config.php:266
+msgid "Yandex"
+msgstr "Yandex"
+
+#: includes/Setting-Page.php:108
+msgid "Your email server login password."
+msgstr "您的电子邮件服务器登录密码。"
+
+#: includes/Setting-Page.php:101
+msgid "Your email server login username."
+msgstr "您的电子邮件服务器登录用户名。"
+
+#: includes/Config.php:36
+msgid "Zoho"
+msgstr "Zoho"

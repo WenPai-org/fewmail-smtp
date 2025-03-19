@@ -1,0 +1,549 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FewMail SMTP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-19 16:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.11; wp-6.7.2\n"
+"X-Domain: fewmail-smtp"
+
+#: includes/Config.php:53
+msgid "126"
+msgstr ""
+
+#: includes/Config.php:48
+msgid "163"
+msgstr ""
+
+#: includes/Config.php:166
+msgid "1und1"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"A WordPress email plugin that makes it convenient for users to configure "
+"SMTP settings."
+msgstr ""
+
+#: includes/Config.php:68
+msgid "Aliyun"
+msgstr ""
+
+#: includes/Config.php:73
+msgid "Aliyun Qiye"
+msgstr ""
+
+#: includes/Config.php:13
+msgid "AOL"
+msgstr ""
+
+#: includes/Setting-Page.php:335
+msgid "Are you sure you want to clear all logs?"
+msgstr ""
+
+#: fewmail-smtp.php:324
+msgid "Auto-clear settings saved!"
+msgstr ""
+
+#: includes/Config.php:171
+msgid "Bluewin"
+msgstr ""
+
+#: includes/Config.php:83
+msgid "Business Email Services"
+msgstr ""
+
+#: includes/Setting-Page.php:118
+msgid "Check to stop logging sent emails."
+msgstr ""
+
+#: includes/Config.php:46
+msgid "China Popular Services"
+msgstr ""
+
+#: includes/Setting-Page.php:191
+msgid "Clear Logs"
+msgstr ""
+
+#: fewmail-smtp.php:98
+msgid "Config"
+msgstr ""
+
+#: fewmail-smtp.php:346
+msgid "Configuration error, please check and resave!"
+msgstr ""
+
+#: fewmail-smtp.php:344
+msgid "Configuration saved successfully!"
+msgstr ""
+
+#: includes/Setting-Page.php:34
+msgid "Configure your SMTP settings to send emails from your WordPress site."
+msgstr ""
+
+#: includes/Setting-Page.php:147
+msgid ""
+"Congratulations, your website's email sending function is working. Start "
+"using it now!"
+msgstr ""
+
+#: includes/Setting-Page.php:193
+msgid "days auto-clear"
+msgstr ""
+
+#: includes/Config.php:175
+msgid "DebugMail"
+msgstr ""
+
+#: includes/Setting-Page.php:112
+msgid "Disable Logs"
+msgstr ""
+
+#: includes/Setting-Page.php:116
+msgid "Disable the email logging feature"
+msgstr ""
+
+#: includes/Setting-Page.php:14
+msgid "Document"
+msgstr ""
+
+#: fewmail-smtp.php:372
+msgid "Email failed to send."
+msgstr ""
+
+#: includes/Setting-Page.php:160
+msgid "Email Logs"
+msgstr ""
+
+#: fewmail-smtp.php:370
+msgid "Email sent!"
+msgstr ""
+
+#: includes/Setting-Page.php:201
+msgid "Email Statistics"
+msgstr ""
+
+#: includes/Setting-Page.php:82
+msgid "Encryption type for secure email sending."
+msgstr ""
+
+#: includes/Setting-Page.php:171 includes/Setting-Page.php:181
+msgid "Error"
+msgstr ""
+
+#: includes/Config.php:179
+msgid "Ethereal"
+msgstr ""
+
+#: includes/Setting-Page.php:221
+msgid "Failed Sends"
+msgstr ""
+
+#: includes/Config.php:183
+msgid "FastMail"
+msgstr ""
+
+#. Name of the plugin
+#: fewmail-smtp.php:225 includes/Setting-Page.php:12
+msgid "FewMail SMTP"
+msgstr ""
+
+#. Author of the plugin
+msgid "FewMail.com"
+msgstr ""
+
+#: fewmail-smtp.php:379
+msgid "Fields are not filled in or there is an error."
+msgstr ""
+
+#: includes/Config.php:188
+msgid "Forward Email"
+msgstr ""
+
+#: includes/Setting-Page.php:39
+msgid "From"
+msgstr ""
+
+#: includes/Setting-Page.php:46
+msgid "From Name"
+msgstr ""
+
+#: includes/Config.php:193
+msgid "GandiMail"
+msgstr ""
+
+#: includes/Setting-Page.php:394
+#, php-format
+msgid "Get settings for %s"
+msgstr ""
+
+#: includes/Config.php:11
+msgid "Global Popular Services"
+msgstr ""
+
+#: includes/Config.php:17
+msgid "Gmail"
+msgstr ""
+
+#: includes/Config.php:197
+msgid "Godaddy"
+msgstr ""
+
+#: includes/Config.php:201
+msgid "GodaddyAsia"
+msgstr ""
+
+#: includes/Config.php:205
+msgid "GodaddyEurope"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://fewmail.com/"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wenpai.org/plugins/fewmail-smtp"
+msgstr ""
+
+#: includes/Config.php:22
+msgid "iCloud"
+msgstr ""
+
+#: includes/Setting-Page.php:167 includes/Setting-Page.php:177
+msgid "ID"
+msgstr ""
+
+#: includes/Config.php:209
+msgid "Infomaniak"
+msgstr ""
+
+#: fewmail-smtp.php:330 fewmail-smtp.php:353
+msgid "Insufficient privileges!"
+msgstr ""
+
+#: includes/Setting-Page.php:225
+msgid "Last Send Time"
+msgstr ""
+
+#: fewmail-smtp.php:100
+msgid "Logs"
+msgstr ""
+
+#: fewmail-smtp.php:314
+msgid "Logs cleared successfully!"
+msgstr ""
+
+#: includes/Config.php:213
+msgid "Mail.ru"
+msgstr ""
+
+#: includes/Config.php:218
+msgid "Mailcatch.app"
+msgstr ""
+
+#. 第三方服务
+#: includes/Config.php:86
+msgid "Mailgun"
+msgstr ""
+
+#: includes/Config.php:91
+msgid "Mailjet"
+msgstr ""
+
+#: includes/Config.php:222
+msgid "Mailosaur"
+msgstr ""
+
+#: includes/Config.php:226
+msgid "Mailtrap"
+msgstr ""
+
+#: includes/Config.php:230
+msgid "Mandrill"
+msgstr ""
+
+#: includes/Setting-Page.php:146
+msgid "Message"
+msgstr ""
+
+#: includes/Setting-Page.php:207
+msgid "Metric"
+msgstr ""
+
+#: includes/Config.php:234
+msgid "Naver"
+msgstr ""
+
+#: includes/Setting-Page.php:226
+msgid "Never Sent"
+msgstr ""
+
+#: includes/Config.php:238
+msgid "OhMySMTP"
+msgstr ""
+
+#: includes/Config.php:243
+msgid "One"
+msgstr ""
+
+#: includes/Config.php:248
+msgid "OpenMailBox"
+msgstr ""
+
+#: includes/Config.php:164
+msgid "Other Services"
+msgstr ""
+
+#: includes/Config.php:26
+msgid "Outlook365"
+msgstr ""
+
+#: includes/Setting-Page.php:105
+msgid "Password"
+msgstr ""
+
+#: includes/Setting-Page.php:56
+msgid "Pick your email service to auto-fill settings."
+msgstr ""
+
+#: includes/Setting-Page.php:396
+#, php-format
+msgid "Please ensure you have the correct username and password for %s."
+msgstr ""
+
+#: includes/Config.php:95
+msgid "Postmark"
+msgstr ""
+
+#: includes/Config.php:58
+msgid "QQ"
+msgstr ""
+
+#: includes/Config.php:63
+msgid "QQex"
+msgstr ""
+
+#: includes/Setting-Page.php:190
+msgid "Refresh"
+msgstr ""
+
+#: includes/Setting-Page.php:194
+msgid "Save Auto-Clear"
+msgstr ""
+
+#: includes/Setting-Page.php:126
+msgid "Save Changes"
+msgstr ""
+
+#: fewmail-smtp.php:236
+msgid "Select a provider"
+msgstr ""
+
+#: includes/Setting-Page.php:133
+msgid "Send a test email to verify your SMTP settings."
+msgstr ""
+
+#: includes/Setting-Page.php:154
+msgid "Send Test"
+msgstr ""
+
+#: includes/Config.php:253
+msgid "SendCloud"
+msgstr ""
+
+#: includes/Config.php:99
+msgid "SendGrid"
+msgstr ""
+
+#: includes/Config.php:103
+msgid "SendinBlue"
+msgstr ""
+
+#: includes/Config.php:107
+msgid "SendPulse"
+msgstr ""
+
+#: includes/Setting-Page.php:53
+msgid "Service Provider"
+msgstr ""
+
+#. AWS SES 按区域字母排序
+#: includes/Config.php:114
+msgid "SES-AP-NORTHEAST-1"
+msgstr ""
+
+#: includes/Config.php:119
+msgid "SES-AP-NORTHEAST-2"
+msgstr ""
+
+#: includes/Config.php:124
+msgid "SES-AP-NORTHEAST-3"
+msgstr ""
+
+#: includes/Config.php:129
+msgid "SES-AP-SOUTH-1"
+msgstr ""
+
+#: includes/Config.php:134
+msgid "SES-AP-SOUTHEAST-1"
+msgstr ""
+
+#: includes/Config.php:139
+msgid "SES-AP-SOUTHEAST-2"
+msgstr ""
+
+#: includes/Config.php:144
+msgid "SES-EU-WEST-1"
+msgstr ""
+
+#: includes/Config.php:149
+msgid "SES-US-EAST-1"
+msgstr ""
+
+#: includes/Config.php:154
+msgid "SES-US-WEST-2"
+msgstr ""
+
+#: includes/Setting-Page.php:94
+msgid "Set to “Yes” if login is required."
+msgstr ""
+
+#: fewmail-smtp.php:216
+msgid "Settings"
+msgstr ""
+
+#: fewmail-smtp.php:226
+msgid "SMTP"
+msgstr ""
+
+#: includes/Setting-Page.php:86
+msgid "SMTP Authentication"
+msgstr ""
+
+#: includes/Setting-Page.php:33
+msgid "SMTP Configuration"
+msgstr ""
+
+#: includes/Setting-Page.php:60
+msgid "SMTP Host"
+msgstr ""
+
+#: includes/Setting-Page.php:67
+msgid "SMTP Port"
+msgstr ""
+
+#: includes/Setting-Page.php:74
+msgid "SMTP Secure"
+msgstr ""
+
+#: includes/Config.php:257
+msgid "Sparkpost"
+msgstr ""
+
+#: includes/Setting-Page.php:142 includes/Setting-Page.php:170
+#: includes/Setting-Page.php:180
+msgid "Subject"
+msgstr ""
+
+#: includes/Setting-Page.php:217
+msgid "Successful Sends"
+msgstr ""
+
+#: includes/Setting-Page.php:15
+msgid "Support"
+msgstr ""
+
+#: includes/Setting-Page.php:132
+msgid "Test Email"
+msgstr ""
+
+#: fewmail-smtp.php:99
+msgid "Testing"
+msgstr ""
+
+#: includes/Setting-Page.php:63
+msgid "The address of your email server."
+msgstr ""
+
+#: includes/Setting-Page.php:42
+msgid "The email address shown as the sender."
+msgstr ""
+
+#: includes/Setting-Page.php:70
+msgid "The port number for your email server."
+msgstr ""
+
+#: includes/Setting-Page.php:49
+msgid "The sender name shown in emails."
+msgstr ""
+
+#: includes/Setting-Page.php:169 includes/Setting-Page.php:179
+msgid "Timestamp"
+msgstr ""
+
+#: includes/Config.php:262
+msgid "Tipimail"
+msgstr ""
+
+#: includes/Setting-Page.php:138 includes/Setting-Page.php:168
+#: includes/Setting-Page.php:178
+msgid "To"
+msgstr ""
+
+#: includes/Setting-Page.php:213
+msgid "Total Emails Attempted"
+msgstr ""
+
+#: includes/Setting-Page.php:98
+msgid "Username"
+msgstr ""
+
+#: includes/Setting-Page.php:208
+msgid "Value"
+msgstr ""
+
+#: includes/Setting-Page.php:13
+#, php-format
+msgid "Version: %s"
+msgstr ""
+
+#: includes/Setting-Page.php:161
+msgid "View and manage your email sending logs."
+msgstr ""
+
+#: includes/Setting-Page.php:202
+msgid "View statistics of emails sent through your SMTP configuration."
+msgstr ""
+
+#: includes/Setting-Page.php:143
+msgid "Welcome to FewMail"
+msgstr ""
+
+#: includes/Config.php:31
+msgid "Yahoo"
+msgstr ""
+
+#: includes/Config.php:266
+msgid "Yandex"
+msgstr ""
+
+#: includes/Setting-Page.php:108
+msgid "Your email server login password."
+msgstr ""
+
+#: includes/Setting-Page.php:101
+msgid "Your email server login username."
+msgstr ""
+
+#: includes/Config.php:36
+msgid "Zoho"
+msgstr ""
