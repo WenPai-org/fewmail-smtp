@@ -401,7 +401,7 @@ require_once plugin_dir_path(__FILE__) . 'lib/plugin-update-checker/plugin-updat
 use YahnisElsts\PluginUpdateChecker\v5p3\PucFactory;
 
 $fewmailSmtpUpdateChecker = PucFactory::buildUpdateChecker(
-    'https://updates.weixiaoduo.com/updatepulse.json',
+    'https://updates.weixiaoduo.com/fewmail-smtp.json',
     __FILE__,
     'fewmail-smtp'
 );
