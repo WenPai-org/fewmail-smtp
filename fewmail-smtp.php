@@ -3,7 +3,7 @@
  * Plugin Name: FewMail SMTP
  * Plugin URI: https://wenpai.org/plugins/fewmail-smtp
  * Description: A WordPress email plugin that makes it convenient for users to configure SMTP settings.
- * Version: 1.0.3
+ * Version: 1.0.5
  * Author: FewMail.com
  * Author URI: https://fewmail.com/
  * License: GPL v2 or later
@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('FEWMAIL_SMTP_VERSION', '1.0.3');
+define('FEWMAIL_SMTP_VERSION', '1.0.5');
 define('FEWMAIL_SMTP_PLUGIN_SLUG', 'fewmail-smtp');
 define('FEWMAIL_SMTP_PLUGIN_PAGE', plugin_basename(dirname(__FILE__)) . '%2F' . basename(__FILE__));
 define('FEWMAIL_SMTP_URL', plugins_url('/', __FILE__));
@@ -25,6 +25,7 @@ define('FEWMAIL_SMTP_ASSETS_URL', FEWMAIL_SMTP_URL . 'assets/');
 
 require_once 'vendor/autoload.php';
 require_once dirname(__FILE__) . '/includes/Setting-Page.php';
+require_once dirname(__FILE__) . '/includes/Config.php';
 
 use FewMailSmtp\Config;
 use FewMailSmtp\Db;
@@ -40,8 +41,13 @@ function fewmail_smtp_activate() {
     ob_start();
     fewmail_smtp_set_options();
     fewmail_smtp_set_stats();
+    $output = ob_get_contents();
+    if (!empty($output)) {
+        error_log('FewMail SMTP Activation Output: ' . bin2hex($output));
+    }
     ob_end_clean();
 }
+
 
 function fewmail_smtp_set_options() {
     $options = [
@@ -109,10 +115,12 @@ function fewmail_smtp_get_current_tab() {
 
 add_action('admin_menu', 'fewmail_smtp_add_setting_page');
 
-$options = get_option('fewmail_smtp_options');
-if ('yes' !== $options['disable_logs']) {
+$options = get_option('fewmail_smtp_options', []);
+if (is_array($options) && isset($options['disable_logs']) && 'yes' === $options['disable_logs']) {
+} else {
     add_filter('wp_mail', 'fewmail_smtp_log_mails', PHP_INT_MAX);
 }
+
 add_action('wp_mail_failed', 'fewmail_smtp_update_failed_status', PHP_INT_MAX);
 add_action('wp_mail_succeeded', 'fewmail_smtp_update_success_status');
 
@@ -234,7 +242,7 @@ function fewmail_smtp_init_host_select() {
     $lists = Config::lists();
     $html = '<select id="configSelect" class="regular-text">';
     $html .= "<option value='' data-host='' data-port='' data-secure=''>" . esc_html__('Select a provider', 'fewmail-smtp') . "</option>";
-    
+
     foreach ($lists as $group_key => $group) {
         $html .= "<optgroup label='" . esc_attr($group['label']) . "'>";
         foreach ($group['services'] as $key => $value) {
@@ -249,7 +257,7 @@ function fewmail_smtp_init_host_select() {
     $html .= '<span id="provider-link"></span>';
     $html .= '<p id="provider-tip" style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"></p>';
     $html .= '</div>';
-    
+
     echo wp_kses($html, [
         'select' => ['id' => [], 'class' => []],
         'optgroup' => ['label' => []],
@@ -387,3 +395,13 @@ function fewmail_smtp_auto_clear_logs() {
     $table = $wpdb->prefix . 'fewmail_smtp_logs';
     $wpdb->query($wpdb->prepare("DELETE FROM $table WHERE timestamp < DATE_SUB(NOW(), INTERVAL %d DAY)", $days));
 }
+
+// Integrate UpdatePulse Server for updates using PUC v5.3
+require_once plugin_dir_path(__FILE__) . 'lib/plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5p3\PucFactory;
+
+$fewmailSmtpUpdateChecker = PucFactory::buildUpdateChecker(
+    'https://updates.weixiaoduo.com/updatepulse.json',
+    __FILE__,
+    'fewmail-smtp'
+);
