@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: FewMail SMTP\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-19 15:53+0000\n"
-"PO-Revision-Date: 2025-03-20 00:29+0800\n"
+"PO-Revision-Date: 2025-03-21 04:37+0800\n"
 "Last-Translator: \n"
 "Language-Team: 简体中文\n"
 "Language: zh_CN\n"
@@ -154,11 +154,11 @@ msgstr "FastMail"
 #. Name of the plugin
 #: fewmail-smtp.php:225 includes/Setting-Page.php:12
 msgid "FewMail SMTP"
-msgstr "飞秒邮件 SMTP"
+msgstr "飞秒邮箱 SMTP"
 
 #. Author of the plugin
 msgid "FewMail.com"
-msgstr "飞秒邮件"
+msgstr "飞秒邮箱"
 
 #: fewmail-smtp.php:379
 msgid "Fields are not filled in or there is an error."
