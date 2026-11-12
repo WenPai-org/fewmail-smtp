@@ -3,7 +3,7 @@
  * Plugin Name: FeiMail SMTP
  * Plugin URI: https://wenpai.org/plugins/feimail-smtp
  * Description: A WordPress email plugin that makes it convenient for users to configure SMTP settings.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: FeiMail.com
  * Author URI: https://feimail.com/
  * License: GPL v2 or later
@@ -64,6 +64,14 @@ add_action('admin_init', function () {
         }
     }
 
+    // 3) 存量表 schema 修复：老版建表缺 embeds（wp_mail 参数列），补齐
+    if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $new_table)) === $new_table) {
+        $cols = $wpdb->get_col("SHOW COLUMNS FROM {$new_table}");
+        if (is_array($cols) && ! in_array('embeds', $cols, true)) {
+            $wpdb->query("ALTER TABLE {$new_table} ADD COLUMN embeds TEXT NULL AFTER error");
+        }
+    }
+
     update_option('feimail_smtp_migration_done', 1, true);
 });
 
@@ -120,6 +128,7 @@ function feimail_smtp_install_table() {
                 `message` TEXT NULL,
                 `headers` TEXT NULL,
                 `error` TEXT NULL,
+                `embeds` TEXT NULL,
                 PRIMARY KEY (`id`)
             ) DEFAULT CHARACTER SET = utf8 DEFAULT COLLATE utf8_general_ci;";
     require_once ABSPATH . 'wp-admin/includes/upgrade.php';
