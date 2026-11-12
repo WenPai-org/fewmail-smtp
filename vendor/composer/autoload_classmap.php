@@ -7,6 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'FewMailSmtp\\Config' => $baseDir . '/includes/Config.php',
-    'FewMailSmtp\\Db' => $baseDir . '/includes/Db.php',
+    'FeiMailSmtp\\Config' => $baseDir . '/includes/Config.php',
+    'FeiMailSmtp\\Db' => $baseDir . '/includes/Db.php',
 );

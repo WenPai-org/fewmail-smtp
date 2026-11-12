@@ -1,6 +1,6 @@
 <?php
 
-namespace FewMailSmtp;
+namespace FeiMailSmtp;
 
 class Db
 {
@@ -28,7 +28,7 @@ class Db
         global $wpdb;
 
         $this->db = $wpdb;
-        $this->table = $wpdb->prefix . 'fewmail_smtp_logs';
+        $this->table = $wpdb->prefix . 'feimail_smtp_logs';
     }
 
     public function insert($data)
@@ -46,7 +46,7 @@ class Db
         );
 
         if (!$result_set) {
-            error_log('FewMail SMTP Log insert error: ' . $this->db->last_error);
+            error_log('FeiMail SMTP Log insert error: ' . $this->db->last_error);
 
             return false;
         }

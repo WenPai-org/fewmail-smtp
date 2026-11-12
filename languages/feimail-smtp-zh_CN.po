@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: FewMail SMTP\n"
+"Project-Id-Version: FeiMail SMTP\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-19 15:53+0000\n"
 "PO-Revision-Date: 2025-03-21 04:37+0800\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.5\n"
 "X-Loco-Version: 2.6.11; wp-6.7.2\n"
-"X-Domain: fewmail-smtp\n"
+"X-Domain: feimail-smtp\n"
 
 #: includes/Config.php:53
 msgid "126"
@@ -49,7 +49,7 @@ msgstr "AOL"
 msgid "Are you sure you want to clear all logs?"
 msgstr "您确实要清除所有日志吗？"
 
-#: fewmail-smtp.php:324
+#: feimail-smtp.php:324
 msgid "Auto-clear settings saved!"
 msgstr "自动清除设置已保存！"
 
@@ -73,15 +73,15 @@ msgstr "中国热门服务"
 msgid "Clear Logs"
 msgstr "清除日志"
 
-#: fewmail-smtp.php:98
+#: feimail-smtp.php:98
 msgid "Config"
 msgstr "配置"
 
-#: fewmail-smtp.php:346
+#: feimail-smtp.php:346
 msgid "Configuration error, please check and resave!"
 msgstr "配置错误，请检查并重新保存！"
 
-#: fewmail-smtp.php:344
+#: feimail-smtp.php:344
 msgid "Configuration saved successfully!"
 msgstr "配置保存成功！"
 
@@ -115,7 +115,7 @@ msgstr "禁用电子邮件日志记录功能"
 msgid "Document"
 msgstr "文档"
 
-#: fewmail-smtp.php:372
+#: feimail-smtp.php:372
 msgid "Email failed to send."
 msgstr "电子邮件发送失败。"
 
@@ -123,7 +123,7 @@ msgstr "电子邮件发送失败。"
 msgid "Email Logs"
 msgstr "电子邮件日志"
 
-#: fewmail-smtp.php:370
+#: feimail-smtp.php:370
 msgid "Email sent!"
 msgstr "电子邮件已发送！"
 
@@ -152,15 +152,15 @@ msgid "FastMail"
 msgstr "FastMail"
 
 #. Name of the plugin
-#: fewmail-smtp.php:225 includes/Setting-Page.php:12
-msgid "FewMail SMTP"
+#: feimail-smtp.php:225 includes/Setting-Page.php:12
+msgid "FeiMail SMTP"
 msgstr "飞秒邮箱 SMTP"
 
 #. Author of the plugin
-msgid "FewMail.com"
+msgid "FeiMail.com"
 msgstr "飞秒邮箱"
 
-#: fewmail-smtp.php:379
+#: feimail-smtp.php:379
 msgid "Fields are not filled in or there is an error."
 msgstr "字段未填写或有错误。"
 
@@ -206,12 +206,12 @@ msgid "GodaddyEurope"
 msgstr "GodaddyEurope"
 
 #. Author URI of the plugin
-msgid "https://fewmail.com/"
-msgstr "https://fewmail.com/"
+msgid "https://feimail.com/"
+msgstr "https://feimail.com/"
 
 #. URI of the plugin
-msgid "https://wenpai.org/plugins/fewmail-smtp"
-msgstr "https://wenpai.org/plugins/fewmail-smtp"
+msgid "https://wenpai.org/plugins/feimail-smtp"
+msgstr "https://wenpai.org/plugins/feimail-smtp"
 
 #: includes/Config.php:22
 msgid "iCloud"
@@ -225,7 +225,7 @@ msgstr "ID"
 msgid "Infomaniak"
 msgstr "Infomaniak"
 
-#: fewmail-smtp.php:330 fewmail-smtp.php:353
+#: feimail-smtp.php:330 feimail-smtp.php:353
 msgid "Insufficient privileges!"
 msgstr "权限不足！"
 
@@ -233,11 +233,11 @@ msgstr "权限不足！"
 msgid "Last Send Time"
 msgstr "上次发送时间"
 
-#: fewmail-smtp.php:100
+#: feimail-smtp.php:100
 msgid "Logs"
 msgstr "日志"
 
-#: fewmail-smtp.php:314
+#: feimail-smtp.php:314
 msgid "Logs cleared successfully!"
 msgstr "日志清除成功！"
 
@@ -343,7 +343,7 @@ msgstr "保存自动清除"
 msgid "Save Changes"
 msgstr "保存更改"
 
-#: fewmail-smtp.php:236
+#: feimail-smtp.php:236
 msgid "Select a provider"
 msgstr "选择提供商"
 
@@ -416,11 +416,11 @@ msgstr "SES-US-WEST-2"
 msgid "Set to “Yes” if login is required."
 msgstr "如果需要登录，则设置为“是”。"
 
-#: fewmail-smtp.php:216
+#: feimail-smtp.php:216
 msgid "Settings"
 msgstr "设置"
 
-#: fewmail-smtp.php:226
+#: feimail-smtp.php:226
 msgid "SMTP"
 msgstr "SMTP"
 
@@ -465,7 +465,7 @@ msgstr "支持"
 msgid "Test Email"
 msgstr "测试电子邮件"
 
-#: fewmail-smtp.php:99
+#: feimail-smtp.php:99
 msgid "Testing"
 msgstr "测试"
 
@@ -524,8 +524,8 @@ msgid "View statistics of emails sent through your SMTP configuration."
 msgstr "查看通过您的 SMTP 配置已发送的电子邮件统计信息。"
 
 #: includes/Setting-Page.php:143
-msgid "Welcome to FewMail"
-msgstr "欢迎使用飞秒邮箱（FewMail）"
+msgid "Welcome to FeiMail"
+msgstr "欢迎使用飞秒邮箱（FeiMail）"
 
 #: includes/Config.php:31
 msgid "Yahoo"

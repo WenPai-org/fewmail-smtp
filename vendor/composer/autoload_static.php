@@ -9,12 +9,12 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
     public static $prefixLengthsPsr4 = array (
         'F' => 
         array (
-            'FewMailSmtp\\' => 12,
+            'FeiMailSmtp\\' => 12,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'FewMailSmtp\\' => 
+        'FeiMailSmtp\\' => 
         array (
             0 => __DIR__ . '/../..' . '/includes',
         ),
@@ -22,8 +22,8 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'FewMailSmtp\\Config' => __DIR__ . '/../..' . '/includes/Config.php',
-        'FewMailSmtp\\Db' => __DIR__ . '/../..' . '/includes/Db.php',
+        'FeiMailSmtp\\Config' => __DIR__ . '/../..' . '/includes/Config.php',
+        'FeiMailSmtp\\Db' => __DIR__ . '/../..' . '/includes/Db.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
