@@ -45,21 +45,23 @@ add_action('admin_init', function () {
     }
     global $wpdb;
 
-    // 1) 旧前缀 option 全量搬新名（options / stats / auto_clear_days 等一并覆盖）
+    // 1) 旧前缀 option 全量搬新名；激活钩子已建的新默认值以旧值覆盖（旧数据为准）
     $old_options = $wpdb->get_col("SELECT option_name FROM {$wpdb->options} WHERE option_name LIKE 'fewmail\\_smtp\\_%'");
     foreach ((array) $old_options as $old_name) {
         $new_name = 'feimail' . substr($old_name, strlen('fewmail'));
-        if (get_option($new_name) === false) {
-            add_option($new_name, get_option($old_name), '', 'yes');
-        }
+        update_option($new_name, get_option($old_name), true);
     }
 
-    // 2) 日志表改名保留历史发信记录
+    // 2) 日志表：新表未建则直接改名；已建（激活钩子建了空表）则并入后删旧表
     $old_table = $wpdb->prefix . 'fewmail_smtp_logs';
     $new_table = $wpdb->prefix . 'feimail_smtp_logs';
-    if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $old_table)) === $old_table
-        && $new_table !== $wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $new_table))) {
-        $wpdb->query("RENAME TABLE {$old_table} TO {$new_table}");
+    if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $old_table)) === $old_table) {
+        if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $new_table)) !== $new_table) {
+            $wpdb->query("RENAME TABLE {$old_table} TO {$new_table}");
+        } else {
+            $wpdb->query("INSERT INTO {$new_table} SELECT * FROM {$old_table}");
+            $wpdb->query("DROP TABLE {$old_table}");
+        }
     }
 
     update_option('feimail_smtp_migration_done', 1, true);
