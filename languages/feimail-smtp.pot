@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: FewMail SMTP\n"
+"Project-Id-Version: FeiMail SMTP\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-19 16:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.6.11; wp-6.7.2\n"
-"X-Domain: fewmail-smtp"
+"X-Domain: feimail-smtp"
 
 #: includes/Config.php:53
 msgid "126"
@@ -50,7 +50,7 @@ msgstr ""
 msgid "Are you sure you want to clear all logs?"
 msgstr ""
 
-#: fewmail-smtp.php:324
+#: feimail-smtp.php:324
 msgid "Auto-clear settings saved!"
 msgstr ""
 
@@ -74,15 +74,15 @@ msgstr ""
 msgid "Clear Logs"
 msgstr ""
 
-#: fewmail-smtp.php:98
+#: feimail-smtp.php:98
 msgid "Config"
 msgstr ""
 
-#: fewmail-smtp.php:346
+#: feimail-smtp.php:346
 msgid "Configuration error, please check and resave!"
 msgstr ""
 
-#: fewmail-smtp.php:344
+#: feimail-smtp.php:344
 msgid "Configuration saved successfully!"
 msgstr ""
 
@@ -116,7 +116,7 @@ msgstr ""
 msgid "Document"
 msgstr ""
 
-#: fewmail-smtp.php:372
+#: feimail-smtp.php:372
 msgid "Email failed to send."
 msgstr ""
 
@@ -124,7 +124,7 @@ msgstr ""
 msgid "Email Logs"
 msgstr ""
 
-#: fewmail-smtp.php:370
+#: feimail-smtp.php:370
 msgid "Email sent!"
 msgstr ""
 
@@ -153,15 +153,15 @@ msgid "FastMail"
 msgstr ""
 
 #. Name of the plugin
-#: fewmail-smtp.php:225 includes/Setting-Page.php:12
-msgid "FewMail SMTP"
+#: feimail-smtp.php:225 includes/Setting-Page.php:12
+msgid "FeiMail SMTP"
 msgstr ""
 
 #. Author of the plugin
-msgid "FewMail.com"
+msgid "FeiMail.com"
 msgstr ""
 
-#: fewmail-smtp.php:379
+#: feimail-smtp.php:379
 msgid "Fields are not filled in or there is an error."
 msgstr ""
 
@@ -207,11 +207,11 @@ msgid "GodaddyEurope"
 msgstr ""
 
 #. Author URI of the plugin
-msgid "https://fewmail.com/"
+msgid "https://feimail.com/"
 msgstr ""
 
 #. URI of the plugin
-msgid "https://wenpai.org/plugins/fewmail-smtp"
+msgid "https://wenpai.org/plugins/feimail-smtp"
 msgstr ""
 
 #: includes/Config.php:22
@@ -226,7 +226,7 @@ msgstr ""
 msgid "Infomaniak"
 msgstr ""
 
-#: fewmail-smtp.php:330 fewmail-smtp.php:353
+#: feimail-smtp.php:330 feimail-smtp.php:353
 msgid "Insufficient privileges!"
 msgstr ""
 
@@ -234,11 +234,11 @@ msgstr ""
 msgid "Last Send Time"
 msgstr ""
 
-#: fewmail-smtp.php:100
+#: feimail-smtp.php:100
 msgid "Logs"
 msgstr ""
 
-#: fewmail-smtp.php:314
+#: feimail-smtp.php:314
 msgid "Logs cleared successfully!"
 msgstr ""
 
@@ -344,7 +344,7 @@ msgstr ""
 msgid "Save Changes"
 msgstr ""
 
-#: fewmail-smtp.php:236
+#: feimail-smtp.php:236
 msgid "Select a provider"
 msgstr ""
 
@@ -417,11 +417,11 @@ msgstr ""
 msgid "Set to “Yes” if login is required."
 msgstr ""
 
-#: fewmail-smtp.php:216
+#: feimail-smtp.php:216
 msgid "Settings"
 msgstr ""
 
-#: fewmail-smtp.php:226
+#: feimail-smtp.php:226
 msgid "SMTP"
 msgstr ""
 
@@ -466,7 +466,7 @@ msgstr ""
 msgid "Test Email"
 msgstr ""
 
-#: fewmail-smtp.php:99
+#: feimail-smtp.php:99
 msgid "Testing"
 msgstr ""
 
@@ -525,7 +525,7 @@ msgid "View statistics of emails sent through your SMTP configuration."
 msgstr ""
 
 #: includes/Setting-Page.php:143
-msgid "Welcome to FewMail"
+msgid "Welcome to FeiMail"
 msgstr ""
 
 #: includes/Config.php:31

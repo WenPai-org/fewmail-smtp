@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'FewMailSmtp\\' => array($baseDir . '/includes'),
+    'FeiMailSmtp\\' => array($baseDir . '/includes'),
 );

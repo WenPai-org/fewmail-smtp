@@ -1,25 +1,25 @@
 <?php
 if (!defined('ABSPATH')) exit;
 
-use FewMailSmtp\Db;
+use FeiMailSmtp\Db;
 
-function fewmail_smtp_setting_page() {
+function feimail_smtp_setting_page() {
     if (!current_user_can('manage_options')) wp_die('Insufficient privileges!');
-    $smtpOptions = get_option('fewmail_smtp_options', true);
-    $currentTab = fewmail_smtp_get_current_tab();
+    $smtpOptions = get_option('feimail_smtp_options', true);
+    $currentTab = feimail_smtp_get_current_tab();
     ?>
     <div class="wrap">
-        <h1><?php esc_html_e('FewMail SMTP', 'fewmail-smtp'); ?>
-            <span style="font-size: 13px; padding-left: 10px;"><?php printf(esc_html__('Version: %s', 'fewmail-smtp'), esc_html(FEWMAIL_SMTP_VERSION)); ?></span>
-            <a href="https://fewmail.com/document/" target="_blank" class="button button-secondary" style="margin-left: 10px;"><?php esc_html_e('Document', 'fewmail-smtp'); ?></a>
-            <a href="https://fewmail.com/forums/" target="_blank" class="button button-secondary"><?php esc_html_e('Support', 'fewmail-smtp'); ?></a>
+        <h1><?php esc_html_e('FeiMail SMTP', 'feimail-smtp'); ?>
+            <span style="font-size: 13px; padding-left: 10px;"><?php printf(esc_html__('Version: %s', 'feimail-smtp'), esc_html(FEWMAIL_SMTP_VERSION)); ?></span>
+            <a href="https://feimail.com/document/" target="_blank" class="button button-secondary" style="margin-left: 10px;"><?php esc_html_e('Document', 'feimail-smtp'); ?></a>
+            <a href="https://feimail.com/forums/" target="_blank" class="button button-secondary"><?php esc_html_e('Support', 'feimail-smtp'); ?></a>
         </h1>
 
-        <div id="fewmail-smtp-notices"></div>
+        <div id="feimail-smtp-notices"></div>
 
         <div class="card">
             <div class="styles-sync-tabs">
-                <?php foreach (fewmail_smtp_setting_page_tabs() as $tab => $label): ?>
+                <?php foreach (feimail_smtp_setting_page_tabs() as $tab => $label): ?>
                     <a href="<?php echo esc_url(admin_url('tools.php?page=' . FEWMAIL_SMTP_PLUGIN_SLUG . '&tab=' . $tab)); ?>"
                        class="styles-tab <?php echo esc_attr($currentTab == $tab ? 'active' : ''); ?>"
                        data-tab="<?php echo esc_attr($tab); ?>">
@@ -30,48 +30,48 @@ function fewmail_smtp_setting_page() {
 
             <div class="styles-sync-content">
                 <div class="styles-section" data-section="config" style="<?php echo $currentTab === 'config' ? '' : 'display: none;'; ?>">
-                    <h2><?php esc_html_e('SMTP Configuration', 'fewmail-smtp'); ?></h2>
-                    <p><?php esc_html_e('Configure your SMTP settings to send emails from your WordPress site.', 'fewmail-smtp'); ?></p>
-                    <form id="fewmail-smtp-config-form" method="post">
+                    <h2><?php esc_html_e('SMTP Configuration', 'feimail-smtp'); ?></h2>
+                    <p><?php esc_html_e('Configure your SMTP settings to send emails from your WordPress site.', 'feimail-smtp'); ?></p>
+                    <form id="feimail-smtp-config-form" method="post">
                         <table class="wp-list-table widefat fixed">
                             <tbody>
                                 <tr>
-                                    <th><?php esc_html_e('From', 'fewmail-smtp'); ?></th>
+                                    <th><?php esc_html_e('From', 'feimail-smtp'); ?></th>
                                     <td>
                                         <input type="email" name="from" value="<?php echo esc_attr($smtpOptions['from']); ?>" class="regular-text" placeholder="your-email@example.com" required />
-                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('The email address shown as the sender.', 'fewmail-smtp'); ?></p>
+                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('The email address shown as the sender.', 'feimail-smtp'); ?></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th><?php esc_html_e('From Name', 'fewmail-smtp'); ?></th>
+                                    <th><?php esc_html_e('From Name', 'feimail-smtp'); ?></th>
                                     <td>
                                         <input type="text" name="from_name" value="<?php echo esc_attr($smtpOptions['from_name']); ?>" class="regular-text" placeholder="Your Name" required />
-                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('The sender name shown in emails.', 'fewmail-smtp'); ?></p>
+                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('The sender name shown in emails.', 'feimail-smtp'); ?></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th><?php esc_html_e('Service Provider', 'fewmail-smtp'); ?></th>
+                                    <th><?php esc_html_e('Service Provider', 'feimail-smtp'); ?></th>
                                     <td>
-                                        <?php fewmail_smtp_init_host_select(); ?>
-                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('Pick your email service to auto-fill settings.', 'fewmail-smtp'); ?></p>
+                                        <?php feimail_smtp_init_host_select(); ?>
+                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('Pick your email service to auto-fill settings.', 'feimail-smtp'); ?></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th><?php esc_html_e('SMTP Host', 'fewmail-smtp'); ?></th>
+                                    <th><?php esc_html_e('SMTP Host', 'feimail-smtp'); ?></th>
                                     <td>
                                         <input type="text" name="host" id="host" value="<?php echo esc_attr($smtpOptions['host']); ?>" class="regular-text" placeholder="smtp.example.com" required />
-                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('The address of your email server.', 'fewmail-smtp'); ?></p>
+                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('The address of your email server.', 'feimail-smtp'); ?></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th><?php esc_html_e('SMTP Port', 'fewmail-smtp'); ?></th>
+                                    <th><?php esc_html_e('SMTP Port', 'feimail-smtp'); ?></th>
                                     <td>
                                         <input type="text" name="port" id="port" value="<?php echo esc_attr($smtpOptions['port']); ?>" class="regular-text" placeholder="587" required />
-                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('The port number for your email server.', 'fewmail-smtp'); ?></p>
+                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('The port number for your email server.', 'feimail-smtp'); ?></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th><?php esc_html_e('SMTP Secure', 'fewmail-smtp'); ?></th>
+                                    <th><?php esc_html_e('SMTP Secure', 'feimail-smtp'); ?></th>
                                     <td>
                                         <?php foreach (['' => 'None', 'ssl' => 'SSL', 'tls' => 'TLS'] as $secure => $secureName): ?>
                                             <label style="margin-right: 15px;">
@@ -79,11 +79,11 @@ function fewmail_smtp_setting_page() {
                                                 <?php echo esc_html($secureName); ?>
                                             </label>
                                         <?php endforeach; ?>
-                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('Encryption type for secure email sending.', 'fewmail-smtp'); ?></p>
+                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('Encryption type for secure email sending.', 'feimail-smtp'); ?></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th><?php esc_html_e('SMTP Authentication', 'fewmail-smtp'); ?></th>
+                                    <th><?php esc_html_e('SMTP Authentication', 'feimail-smtp'); ?></th>
                                     <td>
                                         <?php foreach (['no' => 'No', 'yes' => 'Yes'] as $auth => $authName): ?>
                                             <label style="margin-right: 15px;">
@@ -91,94 +91,94 @@ function fewmail_smtp_setting_page() {
                                                 <?php echo esc_html($authName); ?>
                                             </label>
                                         <?php endforeach; ?>
-                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('Set to “Yes” if login is required.', 'fewmail-smtp'); ?></p>
+                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('Set to “Yes” if login is required.', 'feimail-smtp'); ?></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th><?php esc_html_e('Username', 'fewmail-smtp'); ?></th>
+                                    <th><?php esc_html_e('Username', 'feimail-smtp'); ?></th>
                                     <td>
                                         <input type="text" name="username" value="<?php echo esc_attr(base64_decode($smtpOptions['username'])); ?>" class="regular-text" placeholder="your-email@example.com" required />
-                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('Your email server login username.', 'fewmail-smtp'); ?></p>
+                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('Your email server login username.', 'feimail-smtp'); ?></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th><?php esc_html_e('Password', 'fewmail-smtp'); ?></th>
+                                    <th><?php esc_html_e('Password', 'feimail-smtp'); ?></th>
                                     <td>
                                         <input type="password" name="password" value="<?php echo esc_attr(base64_decode($smtpOptions['password'])); ?>" class="regular-text" placeholder="your-email-password" required />
-                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('Your email server login password.', 'fewmail-smtp'); ?></p>
+                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('Your email server login password.', 'feimail-smtp'); ?></p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th><?php esc_html_e('Disable Logs', 'fewmail-smtp'); ?></th>
+                                    <th><?php esc_html_e('Disable Logs', 'feimail-smtp'); ?></th>
                                     <td>
                                         <label>
                                             <input type="checkbox" name="disable_logs" value="yes" <?php checked($smtpOptions['disable_logs'], 'yes'); ?> />
-                                            <?php esc_html_e('Disable the email logging feature', 'fewmail-smtp'); ?>
+                                            <?php esc_html_e('Disable the email logging feature', 'feimail-smtp'); ?>
                                         </label>
-                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('Check to stop logging sent emails.', 'fewmail-smtp'); ?></p>
+                                        <p style="color: #646970; font-size: 12px; margin: 5px 0 0 0;"><?php esc_html_e('Check to stop logging sent emails.', 'feimail-smtp'); ?></p>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                         <p class="submit">
-                            <input type="hidden" name="action" value="fewmail_smtp_save_config" />
-                            <?php wp_nonce_field('fewmail_smtp_config', 'fewmail_smtp_config-nonce'); ?>
-                            <input type="submit" class="button button-primary" value="<?php esc_html_e('Save Changes', 'fewmail-smtp'); ?>" />
+                            <input type="hidden" name="action" value="feimail_smtp_save_config" />
+                            <?php wp_nonce_field('feimail_smtp_config', 'feimail_smtp_config-nonce'); ?>
+                            <input type="submit" class="button button-primary" value="<?php esc_html_e('Save Changes', 'feimail-smtp'); ?>" />
                         </p>
                     </form>
                 </div>
 
                 <div class="styles-section" data-section="testing" style="<?php echo $currentTab === 'testing' ? '' : 'display: none;'; ?>">
-                    <h2><?php esc_html_e('Test Email', 'fewmail-smtp'); ?></h2>
-                    <p><?php esc_html_e('Send a test email to verify your SMTP settings.', 'fewmail-smtp'); ?></p>
-                    <form id="fewmail-smtp-test-form" method="post">
+                    <h2><?php esc_html_e('Test Email', 'feimail-smtp'); ?></h2>
+                    <p><?php esc_html_e('Send a test email to verify your SMTP settings.', 'feimail-smtp'); ?></p>
+                    <form id="feimail-smtp-test-form" method="post">
                       <table class="wp-list-table widefat fixed">
                           <tbody>
                               <tr>
-                                  <th><?php esc_html_e('To', 'fewmail-smtp'); ?></th>
+                                  <th><?php esc_html_e('To', 'feimail-smtp'); ?></th>
                                   <td><input type="email" name="to" value="<?php echo esc_attr(get_option('admin_email')); ?>" class="regular-text" required /></td>
                               </tr>
                               <tr>
-                                  <th><?php esc_html_e('Subject', 'fewmail-smtp'); ?></th>
-                                  <td><input type="text" name="subject" value="<?php echo esc_attr__('Welcome to FewMail', 'fewmail-smtp'); ?>" class="regular-text" required /></td>
+                                  <th><?php esc_html_e('Subject', 'feimail-smtp'); ?></th>
+                                  <td><input type="text" name="subject" value="<?php echo esc_attr__('Welcome to FeiMail', 'feimail-smtp'); ?>" class="regular-text" required /></td>
                               </tr>
                               <tr>
-                                  <th><?php esc_html_e('Message', 'fewmail-smtp'); ?></th>
-                                  <td><textarea name="message" cols="50" rows="5" class="large-text" required><?php echo esc_textarea(__('Congratulations, your website\'s email sending function is working. Start using it now!', 'fewmail-smtp')); ?></textarea></td>
+                                  <th><?php esc_html_e('Message', 'feimail-smtp'); ?></th>
+                                  <td><textarea name="message" cols="50" rows="5" class="large-text" required><?php echo esc_textarea(__('Congratulations, your website\'s email sending function is working. Start using it now!', 'feimail-smtp')); ?></textarea></td>
                               </tr>
                           </tbody>
                       </table>
                         <p class="submit">
-                            <input type="hidden" name="action" value="fewmail_smtp_test_email" />
-                            <?php wp_nonce_field('fewmail_smtp_testing', 'fewmail_smtp_testing-nonce'); ?>
-                            <input type="submit" class="button button-primary" value="<?php esc_html_e('Send Test', 'fewmail-smtp'); ?>" />
+                            <input type="hidden" name="action" value="feimail_smtp_test_email" />
+                            <?php wp_nonce_field('feimail_smtp_testing', 'feimail_smtp_testing-nonce'); ?>
+                            <input type="submit" class="button button-primary" value="<?php esc_html_e('Send Test', 'feimail-smtp'); ?>" />
                         </p>
                     </form>
                 </div>
 
                 <div class="styles-section" data-section="logs" style="<?php echo $currentTab === 'logs' ? '' : 'display: none;'; ?>">
-                    <h2><?php esc_html_e('Email Logs', 'fewmail-smtp'); ?></h2>
-                    <p><?php esc_html_e('View and manage your email sending logs.', 'fewmail-smtp'); ?></p>
-                    <div id="md-security" data-security="<?php echo esc_attr(wp_create_nonce('fewmail_smtp_logs')); ?>"></div>
+                    <h2><?php esc_html_e('Email Logs', 'feimail-smtp'); ?></h2>
+                    <p><?php esc_html_e('View and manage your email sending logs.', 'feimail-smtp'); ?></p>
+                    <div id="md-security" data-security="<?php echo esc_attr(wp_create_nonce('feimail_smtp_logs')); ?>"></div>
                     <div style="position: relative;">
-                        <table id="fewmail-smtp-log" class="wp-list-table widefat fixed striped" style="width:100%;">
+                        <table id="feimail-smtp-log" class="wp-list-table widefat fixed striped" style="width:100%;">
                             <thead>
                                 <tr>
-                                    <th><?php esc_html_e('ID', 'fewmail-smtp'); ?></th>
-                                    <th><?php esc_html_e('To', 'fewmail-smtp'); ?></th>
-                                    <th><?php esc_html_e('Timestamp', 'fewmail-smtp'); ?></th>
-                                    <th><?php esc_html_e('Subject', 'fewmail-smtp'); ?></th>
-                                    <th><?php esc_html_e('Error', 'fewmail-smtp'); ?></th>
+                                    <th><?php esc_html_e('ID', 'feimail-smtp'); ?></th>
+                                    <th><?php esc_html_e('To', 'feimail-smtp'); ?></th>
+                                    <th><?php esc_html_e('Timestamp', 'feimail-smtp'); ?></th>
+                                    <th><?php esc_html_e('Subject', 'feimail-smtp'); ?></th>
+                                    <th><?php esc_html_e('Error', 'feimail-smtp'); ?></th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
                             <tfoot>
                                 <tr>
-                                    <th><?php esc_html_e('ID', 'fewmail-smtp'); ?></th>
-                                    <th><?php esc_html_e('To', 'fewmail-smtp'); ?></th>
-                                    <th><?php esc_html_e('Timestamp', 'fewmail-smtp'); ?></th>
-                                    <th><?php esc_html_e('Subject', 'fewmail-smtp'); ?></th>
-                                    <th><?php esc_html_e('Error', 'fewmail-smtp'); ?></th>
+                                    <th><?php esc_html_e('ID', 'feimail-smtp'); ?></th>
+                                    <th><?php esc_html_e('To', 'feimail-smtp'); ?></th>
+                                    <th><?php esc_html_e('Timestamp', 'feimail-smtp'); ?></th>
+                                    <th><?php esc_html_e('Subject', 'feimail-smtp'); ?></th>
+                                    <th><?php esc_html_e('Error', 'feimail-smtp'); ?></th>
                                 </tr>
                             </tfoot>
                         </table>
@@ -187,43 +187,43 @@ function fewmail_smtp_setting_page() {
                         </div>
                     </div>
                     <p class="submit">
-                        <button id="refresh-logs" class="button button-secondary"><?php esc_html_e('Refresh', 'fewmail-smtp'); ?></button>
-                        <button id="clear-logs" class="button button-secondary"><?php esc_html_e('Clear Logs', 'fewmail-smtp'); ?></button>
-                        <input type="number" id="auto-clear-days" name="auto_clear_days" min="1" value="<?php echo esc_attr(get_option('fewmail_smtp_auto_clear_days', 180)); ?>" class="small-text" />
-                        <label for="auto-clear-days"><?php esc_html_e('days auto-clear', 'fewmail-smtp'); ?></label>
-                        <button id="save-auto-clear" class="button button-primary"><?php esc_html_e('Save Auto-Clear', 'fewmail-smtp'); ?></button>
+                        <button id="refresh-logs" class="button button-secondary"><?php esc_html_e('Refresh', 'feimail-smtp'); ?></button>
+                        <button id="clear-logs" class="button button-secondary"><?php esc_html_e('Clear Logs', 'feimail-smtp'); ?></button>
+                        <input type="number" id="auto-clear-days" name="auto_clear_days" min="1" value="<?php echo esc_attr(get_option('feimail_smtp_auto_clear_days', 180)); ?>" class="small-text" />
+                        <label for="auto-clear-days"><?php esc_html_e('days auto-clear', 'feimail-smtp'); ?></label>
+                        <button id="save-auto-clear" class="button button-primary"><?php esc_html_e('Save Auto-Clear', 'feimail-smtp'); ?></button>
                     </p>
                 </div>
             </div>
         </div>
 
         <div class="card">
-            <h2><?php esc_html_e('Email Statistics', 'fewmail-smtp'); ?></h2>
-            <p><?php esc_html_e('View statistics of emails sent through your SMTP configuration.', 'fewmail-smtp'); ?></p>
-            <?php $stats = get_option('fewmail_smtp_stats', []); ?>
+            <h2><?php esc_html_e('Email Statistics', 'feimail-smtp'); ?></h2>
+            <p><?php esc_html_e('View statistics of emails sent through your SMTP configuration.', 'feimail-smtp'); ?></p>
+            <?php $stats = get_option('feimail_smtp_stats', []); ?>
             <table class="wp-list-table widefat fixed">
                 <thead>
                     <tr>
-                        <th><?php esc_html_e('Metric', 'fewmail-smtp'); ?></th>
-                        <th><?php esc_html_e('Value', 'fewmail-smtp'); ?></th>
+                        <th><?php esc_html_e('Metric', 'feimail-smtp'); ?></th>
+                        <th><?php esc_html_e('Value', 'feimail-smtp'); ?></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th><?php esc_html_e('Total Emails Attempted', 'fewmail-smtp'); ?></th>
+                        <th><?php esc_html_e('Total Emails Attempted', 'feimail-smtp'); ?></th>
                         <td><?php echo esc_html($stats['total_emails'] ?? 0); ?></td>
                     </tr>
                     <tr>
-                        <th><?php esc_html_e('Successful Sends', 'fewmail-smtp'); ?></th>
+                        <th><?php esc_html_e('Successful Sends', 'feimail-smtp'); ?></th>
                         <td><?php echo esc_html($stats['successful_sends'] ?? 0); ?></td>
                     </tr>
                     <tr>
-                        <th><?php esc_html_e('Failed Sends', 'fewmail-smtp'); ?></th>
+                        <th><?php esc_html_e('Failed Sends', 'feimail-smtp'); ?></th>
                         <td><?php echo esc_html($stats['failed_sends'] ?? 0); ?></td>
                     </tr>
                     <tr>
-                        <th><?php esc_html_e('Last Send Time', 'fewmail-smtp'); ?></th>
-                        <td><?php echo esc_html($stats['last_send_time'] ?? __('Never Sent', 'fewmail-smtp')); ?></td>
+                        <th><?php esc_html_e('Last Send Time', 'feimail-smtp'); ?></th>
+                        <td><?php echo esc_html($stats['last_send_time'] ?? __('Never Sent', 'feimail-smtp')); ?></td>
                     </tr>
                 </tbody>
             </table>
@@ -238,16 +238,16 @@ function fewmail_smtp_setting_page() {
         function showNotice(message, isSuccess) {
             var noticeClass = isSuccess ? 'notice-success' : 'notice-error';
             var html = '<div class="notice ' + noticeClass + '"><p><strong>' + message + '</strong></p></div>';
-            $('#fewmail-smtp-notices').html(html).show();
+            $('#feimail-smtp-notices').html(html).show();
             setTimeout(function() {
-                $('#fewmail-smtp-notices').fadeOut('slow', function() { $(this).empty(); });
+                $('#feimail-smtp-notices').fadeOut('slow', function() { $(this).empty(); });
             }, 3000);
         }
 
-        $('#fewmail-smtp-config-form').on('submit', function(e) {
+        $('#feimail-smtp-config-form').on('submit', function(e) {
             e.preventDefault();
             var formData = $(this).serialize();
-            $.post(fewmail_smtp.ajaxurl, formData, function(response) {
+            $.post(feimail_smtp.ajaxurl, formData, function(response) {
                 showNotice(response.data.message, response.success);
                 if (response.data.disable_logs === 'yes') {
                     $('.styles-tab[data-tab="logs"]').hide();
@@ -260,10 +260,10 @@ function fewmail_smtp_setting_page() {
             });
         });
 
-        $('#fewmail-smtp-test-form').on('submit', function(e) {
+        $('#feimail-smtp-test-form').on('submit', function(e) {
             e.preventDefault();
             var formData = $(this).serialize();
-            $.post(fewmail_smtp.ajaxurl, formData, function(response) {
+            $.post(feimail_smtp.ajaxurl, formData, function(response) {
                 showNotice(response.data.message, response.success);
             });
         });
@@ -279,7 +279,7 @@ function fewmail_smtp_setting_page() {
 
             if (tab === 'logs' && !logsLoaded) {
                 $('.loading-dots').show();
-                dt = new DataTable('#fewmail-smtp-log', {
+                dt = new DataTable('#feimail-smtp-log', {
                     "idSrc": "id",
                     rowId: 'id',
                     paging: true,
@@ -287,7 +287,7 @@ function fewmail_smtp_setting_page() {
                     "processing": true,
                     "serverSide": true,
                     scrollX: true,
-                    "ajax": fewmail_smtp.ajaxurl + '?action=fewmail_smtp_get_logs&security=' + $('#md-security').data('security'),
+                    "ajax": feimail_smtp.ajaxurl + '?action=feimail_smtp_get_logs&security=' + $('#md-security').data('security'),
                     "columns": [
                         {"class": "details-control", "orderable": true, "data": "id", "defaultContent": ""},
                         {"data": "to"},
@@ -303,7 +303,7 @@ function fewmail_smtp_setting_page() {
                 });
 
                 var detailRows = [];
-                $('#fewmail-smtp-log tbody').on('click', 'tr td.details-control', function () {
+                $('#feimail-smtp-log tbody').on('click', 'tr td.details-control', function () {
                     var td = $(this).closest('tr');
                     var row = dt.row(td);
                     var idx = $.inArray(td.attr('id'), detailRows);
@@ -332,9 +332,9 @@ function fewmail_smtp_setting_page() {
                     }
                 });
                 $('#clear-logs').on('click', function () {
-                    if (confirm('<?php echo esc_js(__('Are you sure you want to clear all logs?', 'fewmail-smtp')); ?>')) {
-                        $.post(fewmail_smtp.ajaxurl, {
-                            action: 'fewmail_smtp_clear_logs',
+                    if (confirm('<?php echo esc_js(__('Are you sure you want to clear all logs?', 'feimail-smtp')); ?>')) {
+                        $.post(feimail_smtp.ajaxurl, {
+                            action: 'feimail_smtp_clear_logs',
                             security: $('#md-security').data('security')
                         }, function (response) {
                             if (response.success) {
@@ -347,8 +347,8 @@ function fewmail_smtp_setting_page() {
 
                 $('#save-auto-clear').on('click', function () {
                     var days = $('#auto-clear-days').val();
-                    $.post(fewmail_smtp.ajaxurl, {
-                        action: 'fewmail_smtp_save_auto_clear',
+                    $.post(feimail_smtp.ajaxurl, {
+                        action: 'feimail_smtp_save_auto_clear',
                         security: $('#md-security').data('security'),
                         days: days
                     }, function (response) {
@@ -391,9 +391,9 @@ function fewmail_smtp_setting_page() {
             else $('.secure[value=tls]').prop('checked', true);
 
             if (providerValue) {
-                var linkText = '<?php echo esc_js(__('Get settings for %s', 'fewmail-smtp')); ?>'.replace('%s', providerName);
-                $('#provider-link').html('<a href="https://fewmail.com/document/' + providerValue + '" target="_blank" style="color: #007cba; text-decoration: none;">' + linkText + ' ↗</a>');
-                var tipText = '<?php echo esc_js(__('Please ensure you have the correct username and password for %s.', 'fewmail-smtp')); ?>'.replace('%s', providerName);
+                var linkText = '<?php echo esc_js(__('Get settings for %s', 'feimail-smtp')); ?>'.replace('%s', providerName);
+                $('#provider-link').html('<a href="https://feimail.com/document/' + providerValue + '" target="_blank" style="color: #007cba; text-decoration: none;">' + linkText + ' ↗</a>');
+                var tipText = '<?php echo esc_js(__('Please ensure you have the correct username and password for %s.', 'feimail-smtp')); ?>'.replace('%s', providerName);
                 $('#provider-tip').text(tipText);
             } else {
                 $('#provider-link').empty();
@@ -459,7 +459,7 @@ function fewmail_smtp_setting_page() {
         border-left: 4px solid #dc3232;
     }
     td { vertical-align: middle; }
-    #fewmail-smtp-log_wrapper #dt-length-0 { width: 50px; }
+    #feimail-smtp-log_wrapper #dt-length-0 { width: 50px; }
     .details-control:before { content: '\25B6'; padding-right: 5px; }
     .details-control.details:before { content: '\25BC'; padding-right: 5px; }
     </style>
