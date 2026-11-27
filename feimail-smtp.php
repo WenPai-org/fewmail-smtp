@@ -17,11 +17,18 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('FEWMAIL_SMTP_VERSION', '1.0.5');
-define('FEWMAIL_SMTP_PLUGIN_SLUG', 'feimail-smtp');
-define('FEWMAIL_SMTP_PLUGIN_PAGE', plugin_basename(dirname(__FILE__)) . '%2F' . basename(__FILE__));
-define('FEWMAIL_SMTP_URL', plugins_url('/', __FILE__));
-define('FEWMAIL_SMTP_ASSETS_URL', FEWMAIL_SMTP_URL . 'assets/');
+define('FEIMAIL_SMTP_VERSION', '1.1.1');
+define('FEIMAIL_SMTP_PLUGIN_SLUG', 'feimail-smtp');
+define('FEIMAIL_SMTP_PLUGIN_PAGE', plugin_basename(dirname(__FILE__)) . '%2F' . basename(__FILE__));
+define('FEIMAIL_SMTP_URL', plugins_url('/', __FILE__));
+define('FEIMAIL_SMTP_ASSETS_URL', FEIMAIL_SMTP_URL . 'assets/');
+
+// Legacy constant aliases for backward compatibility.
+define('FEWMAIL_SMTP_VERSION', FEIMAIL_SMTP_VERSION);
+define('FEWMAIL_SMTP_PLUGIN_SLUG', FEIMAIL_SMTP_PLUGIN_SLUG);
+define('FEWMAIL_SMTP_PLUGIN_PAGE', FEIMAIL_SMTP_PLUGIN_PAGE);
+define('FEWMAIL_SMTP_URL', FEIMAIL_SMTP_URL);
+define('FEWMAIL_SMTP_ASSETS_URL', FEIMAIL_SMTP_ASSETS_URL);
 
 require_once 'vendor/autoload.php';
 require_once dirname(__FILE__) . '/includes/Setting-Page.php';
@@ -258,8 +265,8 @@ function feimail_smtp_check_credentials($options = []) {
 }
 
 function feimail_smtp_plugin_action_links($links, $file) {
-    if ($file == urldecode(FEWMAIL_SMTP_PLUGIN_PAGE)) {
-        $page = FEWMAIL_SMTP_PLUGIN_SLUG;
+    if ($file == urldecode(FEIMAIL_SMTP_PLUGIN_PAGE)) {
+        $page = FEIMAIL_SMTP_PLUGIN_SLUG;
         $links[] = "<a href='tools.php?page={$page}'>" . esc_html__('Settings', 'feimail-smtp') . "</a>";
     }
     return $links;
@@ -272,7 +279,7 @@ function feimail_smtp_add_setting_page() {
         esc_html__('FeiMail SMTP', 'feimail-smtp'),
         esc_html__('SMTP', 'feimail-smtp'),
         'manage_options',
-        FEWMAIL_SMTP_PLUGIN_SLUG,
+        FEIMAIL_SMTP_PLUGIN_SLUG,
         'feimail_smtp_setting_page'
     );
 }
@@ -318,8 +325,8 @@ function feimail_smtp_enqueue_scripts() {
     $screen = get_current_screen();
     if (!$screen) return;
     if (strpos($screen->id, 'feimail-smtp') !== false) {
-        wp_enqueue_style('datatable', FEWMAIL_SMTP_ASSETS_URL . 'datatables.min.css', [], FEWMAIL_SMTP_VERSION);
-        wp_register_script('datatable', FEWMAIL_SMTP_ASSETS_URL . 'datatables.min.js', ['jquery'], FEWMAIL_SMTP_VERSION, true);
+        wp_enqueue_style('datatable', FEIMAIL_SMTP_ASSETS_URL . 'datatables.min.css', [], FEIMAIL_SMTP_VERSION);
+        wp_register_script('datatable', FEIMAIL_SMTP_ASSETS_URL . 'datatables.min.js', ['jquery'], FEIMAIL_SMTP_VERSION, true);
         wp_localize_script('datatable', 'feimail_smtp', ['ajaxurl' => admin_url('admin-ajax.php')]);
         wp_enqueue_script('datatable');
     }

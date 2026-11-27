@@ -10,7 +10,7 @@ function feimail_smtp_setting_page() {
     ?>
     <div class="wrap">
         <h1><?php esc_html_e('FeiMail SMTP', 'feimail-smtp'); ?>
-            <span style="font-size: 13px; padding-left: 10px;"><?php printf(esc_html__('Version: %s', 'feimail-smtp'), esc_html(FEWMAIL_SMTP_VERSION)); ?></span>
+            <span style="font-size: 13px; padding-left: 10px;"><?php printf(esc_html__('Version: %s', 'feimail-smtp'), esc_html(FEIMAIL_SMTP_VERSION)); ?></span>
             <a href="https://feimail.com/document/" target="_blank" class="button button-secondary" style="margin-left: 10px;"><?php esc_html_e('Document', 'feimail-smtp'); ?></a>
             <a href="https://feimail.com/forums/" target="_blank" class="button button-secondary"><?php esc_html_e('Support', 'feimail-smtp'); ?></a>
         </h1>
@@ -20,7 +20,7 @@ function feimail_smtp_setting_page() {
         <div class="card">
             <div class="styles-sync-tabs">
                 <?php foreach (feimail_smtp_setting_page_tabs() as $tab => $label): ?>
-                    <a href="<?php echo esc_url(admin_url('tools.php?page=' . FEWMAIL_SMTP_PLUGIN_SLUG . '&tab=' . $tab)); ?>"
+                    <a href="<?php echo esc_url(admin_url('tools.php?page=' . FEIMAIL_SMTP_PLUGIN_SLUG . '&tab=' . $tab)); ?>"
                        class="styles-tab <?php echo esc_attr($currentTab == $tab ? 'active' : ''); ?>"
                        data-tab="<?php echo esc_attr($tab); ?>">
                         <?php echo esc_html($label); ?>
